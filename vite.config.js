@@ -4,6 +4,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   base: '/lada-portfolio/',
+  build: {
+    outDir: 'docs',
+  },
   plugins: [
     react(),
     tailwindcss(),
