@@ -10,9 +10,9 @@ export default function About() {
 
         {/* Bio */}
         <div>
-          <p className="text-stone-400 text-sm tracking-widest uppercase mb-4">About</p>
-          <h1 className="text-4xl font-light text-stone-900 mb-8">Lada Sritongbai</h1>
-          <div className="space-y-4 text-stone-600 leading-relaxed">
+          <p className="text-text-muted text-sm tracking-widest uppercase mb-4">About</p>
+          <h1 className="text-4xl font-light text-text mb-8">Lada Sritongbai</h1>
+          <div className="space-y-4 text-text-muted leading-relaxed">
             <p>
               Hi, I'm Lada. An artist and illustrator with a passion for creating work that
               resonates on a personal level. My practice spans editorial illustration, character
@@ -29,10 +29,10 @@ export default function About() {
           </div>
 
           <div className="mt-12 space-y-3">
-            <h2 className="text-xs tracking-widest uppercase text-stone-400">Skills</h2>
+            <h2 className="text-xs tracking-widest uppercase text-text-muted">Skills</h2>
             <div className="flex flex-wrap gap-2">
               {['Narrative Illustration', 'Character Design', 'Digital Art', 'Procreate', 'Adobe Illustrator'].map(skill => (
-                <span key={skill} className="text-sm text-stone-600 border border-stone-200 px-3 py-1">
+                <span key={skill} className="text-sm text-text-muted border border-border px-3 py-1">
                   {skill}
                 </span>
               ))}

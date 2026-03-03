@@ -12,8 +12,8 @@ export default function Nav() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-stone-200">
-      <nav className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="text-stone-900 font-semibold tracking-wide text-lg">
+      <nav className="max-w-5xl mx-auto px-6 py-8 flex items-center justify-between">
+        <Link to="/" className="font-display text-text font-semibold tracking-wide text-2xl">
           Lada Sritongbai
         </Link>
         <ul className="flex gap-8">
@@ -21,7 +21,7 @@ export default function Nav() {
             <li key={to}>
               <Link
                 to={to}
-                className={`text-sm tracking-wide transition-colors duration-200 ${
+                className={`text-md tracking-wide transition-colors duration-200 ${
                   pathname === to
                     ? 'text-stone-900 font-medium'
                     : 'text-stone-400 hover:text-stone-900'

@@ -20,30 +20,30 @@ const pieces = [
 export default function Gallery() {
   const [selected, setSelected] = useState(null);
   return (
-    <div className="max-w-screen mx-auto px-6 py-20 px-[10vw]">
+    <div className="max-w-screen mx-auto py-20 px-[10vw]">
       <div className="mb-12">
-        <p className="text-stone-400 text-sm tracking-widest uppercase mb-4">Work</p>
-        <h1 className="text-4xl font-light text-stone-900">Gallery</h1>
+        <p className="text-text text-sm tracking-widest uppercase mb-4">Work</p>
+        <h1 className="text-4xl font-light text-text">Gallery</h1>
       </div>
 
       <div className="grid gap-6" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))' }}>
         {pieces.map((piece) => (
           <div key={piece.id}>
-            <div className="bg-stone-100 w-full overflow-hidden cursor-pointer group aspect-square" onClick={() => setSelected(piece)}>
-              <div className="w-full h-full flex items-center justify-center text-stone-300 text-sm group-hover:bg-stone-200 transition-colors duration-200">
+            <div className="bg-bg-light w-full overflow-hidden cursor-pointer group aspect-square" onClick={() => setSelected(piece)}>
+              <div className="w-full h-full flex items-center justify-center text-text-muted text-sm group-hover:bg-bg-dark transition-colors duration-200">
                 {piece.title}
               </div>
             </div>
-            <p className="text-stone-800 text-sm mt-2">{piece.title}</p>
+            <p className="text-text text-sm mt-2">{piece.title}</p>
           </div>
         ))}
       </div>
       {selected && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={() => setSelected(null)}>
-          <div className="bg-white p-6 rounded-lg max-w-sm w-full" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 bg-bg-dark/80 flex items-center justify-center z-50" onClick={() => setSelected(null)}>
+          <div className="bg-bg-light p-6 rounded-lg max-w-sm w-full" onClick={(e) => e.stopPropagation()}>
             <h2 className="text-2xl font-semibold mb-4">{selected.title}</h2>
-            <p className="text-stone-700 mb-4">{selected.description}</p>
-            <button className="px-4 py-2 bg-stone-800 text-white rounded hover:bg-stone-700 transition-colors duration-200 cursor-pointer" onClick={() => setSelected(null)}>Close</button>
+            <p className="text-text mb-4">{selected.description}</p>
+            <button className="px-4 py-2 bg-primary text-white rounded hover:bg-bg-dark transition-colors duration-200 cursor-pointer" onClick={() => setSelected(null)}>Close</button>
           </div>
         </div>
       )}

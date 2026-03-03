@@ -8,7 +8,7 @@ import Contact from './pages/Contact'
 
 export default function App() {
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] min-h-screen">
+    <div className="bg-bg grid grid-rows-[auto_1fr_auto] min-h-screen">
       <Nav />
       <main>
         <Routes>
