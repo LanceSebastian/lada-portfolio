@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import gallery from "../data/gallery.js"
+
 const pieces = [
   { id: 1,  title: 'Solitude',        description: 'Digital illustration, 2024' },
   { id: 2,  title: 'Morning Drift',   description: 'Procreate, 2024' },
@@ -27,20 +29,21 @@ export default function Gallery() {
       </div>
 
       <div className="grid gap-6" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))' }}>
-        {pieces.map((piece) => (
+        {gallery.map((piece) => (
           <div key={piece.id}>
-            <div className="bg-bg-light w-full overflow-hidden cursor-pointer group aspect-square" onClick={() => setSelected(piece)}>
+            <div className="bg-bg w-full overflow-hidden cursor-pointer group aspect-square" onClick={() => setSelected(piece)}>
               <div className="w-full h-full flex items-center justify-center text-text-muted text-sm group-hover:bg-bg-dark transition-colors duration-200">
-                {piece.title}
+                <img src={piece.link} alt={piece.title} className="w-full h-full object-contain"></img>
               </div>
             </div>
-            <p className="text-text text-sm mt-2">{piece.title}</p>
+            <p className="text-text text-sm mt-2 text-center">{piece.title}</p>
           </div>
         ))}
       </div>
       {selected && (
         <div className="fixed inset-0 bg-bg-dark/80 flex items-center justify-center z-50" onClick={() => setSelected(null)}>
-          <div className="bg-bg-light p-6 rounded-lg max-w-sm w-full" onClick={(e) => e.stopPropagation()}>
+          <div className="bg-bg-light p-6 rounded-lg max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
+            <img src={selected.link} alt={selected.title} className=""></img>
             <h2 className="text-2xl font-semibold mb-4">{selected.title}</h2>
             <p className="text-text mb-4">{selected.description}</p>
             <button className="px-4 py-2 bg-primary text-white rounded hover:bg-bg-dark transition-colors duration-200 cursor-pointer" onClick={() => setSelected(null)}>Close</button>
