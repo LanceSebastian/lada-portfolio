@@ -11,7 +11,7 @@ export default function Nav() {
   const { pathname } = useLocation()
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-stone-200">
+    <header className="sticky top-0 z-50 bg-bg border-b border-stone-200">
       <nav className="max-w-5xl mx-auto px-6 py-8 flex items-center justify-between">
         <Link to="/" className="font-display text-text font-semibold tracking-wide text-2xl">
           Lada Sritongbai
