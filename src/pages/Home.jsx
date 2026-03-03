@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center px-6 mb-24">
+    <div className="min-h-screen/50 flex flex-col items-center px-6 mb-24">
       <div className="max-w-2xl w-full justify-center mt-48 p-12">
         <p className="text-center text-sm/0 tracking-widest uppercase mb-4 text-gray-500">
           Freelance Illustrator
