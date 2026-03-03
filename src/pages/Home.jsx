@@ -11,7 +11,7 @@ export default function Home() {
           Lada Sritongbai
         </h1>
         <div className="">
-          <img src="assets/images/sloth.png" alt="placeholder" className="w-full max-w-md mx-auto" />
+          <img src="/images/sloth.png" alt="placeholder" className="w-full max-w-md mx-auto" />
         </div>
         <div className="flex justify-center gap-6">
           <Link

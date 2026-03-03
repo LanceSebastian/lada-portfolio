@@ -5,7 +5,7 @@ export default function About() {
 
         {/* Photo placeholder */}
         <div className=" aspect-3/4 w-full flex items-center justify-center text-sm">
-          <img src="./assets/images/author.jpg" alt="placeholder" className="w-full bg-cover" />
+          <img src="/images/author.jpg" alt="placeholder" className="w-full bg-cover" />
         </div>
 
         {/* Bio */}
