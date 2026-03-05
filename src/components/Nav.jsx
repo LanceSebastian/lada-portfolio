@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 const links = [
@@ -13,11 +14,12 @@ const social = [
 
 export default function Nav() {
   const { pathname } = useLocation()
+  const [open, setOpen] = useState(false)
 
   return (
     <header className="sticky top-0 z-50 bg-bg-light border-stone-200">
-      <nav className=" max-w-screen mx-auto px-6 py-8 grid grid-cols-3 items-center justify-between">
-        <ul className="flex gap-8">
+      <nav className=" max-w-screen mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-3 items-center justify-between">
+        <ul className="hidden md:flex gap-8">
           {links.map(({ to, label }) => (
             <li key={to}>
               <Link
@@ -33,10 +35,12 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-        <Link to="/" className="font-display text-text font-semibold tracking-wide text-4xl text-center">
+
+        <Link to="/" className="font-display text-text font-semibold tracking-wide text-4xl text-left md:text-center">
           Lada Sritongbai
         </Link>
-        <ul className="flex gap-8 justify-end">
+
+        <ul className="hidden md:flex gap-8 justify-end">
           {social.map(({ to, icon }) => (
             <li key={to}>
               <Link
@@ -52,6 +56,11 @@ export default function Nav() {
             </li>
           ))}
         </ul>
+        
+        <button className="flex justify-end md:hidden" onClick={() => setOpen(!open)}>
+          <i className='fa-solid fa-bars text-3xl'></i>
+        </button>
+
       </nav>
     </header>
   )
