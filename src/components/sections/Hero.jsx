@@ -1,36 +1,33 @@
 import { Link } from 'react-router-dom'
+import dots from '../../data/dots'
+import dotsMobile from '../../data/dots-mobile'
 
-const cols = 8
-const rows = 6
-const vw = window.innerWidth / 1000
-
-const dots = Array.from({ length: cols * rows }, (_, i) => ({
-  id: i,
-  x: (i % cols) * (100 / cols) + Math.random() * 8,
-  y: Math.floor(i / cols) * (100 / rows) + Math.random() * 8,
-  delay: Math.random() * 12,
-  size: (Math.random() + 1) * 60,
-}))
+function DotLayer({ data }) {
+  return (
+    <div className="absolute inset-0 overflow-hidden">
+      {data.map(dot => (
+        <div
+          key={dot.id}
+          className="absolute rounded-full bg-primary/20 animate-bob"
+          style={{
+            left: `${dot.x}%`,
+            top: `${dot.y}%`,
+            width: dot.size,
+            height: dot.size,
+            animationDelay: `${dot.delay}s`,
+          }}
+        />
+      ))}
+    </div>
+  )
+}
 
 export default function Hero() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-6">
-      <div className="min-h-screen w-full relative rounded-t-4xl">
-        <div className="absolute inset-0 overflow-hidden">
-          {dots.map(dot => (
-            <div
-              key={dot.id}
-              className="absolute rounded-full bg-primary/20 animate-bob"
-              style={{
-                left: `${dot.x}%`,
-                top: `${dot.y}%`,
-                width: dot.size,
-                height: dot.size,
-                animationDelay: `${dot.delay}s`,
-              }}
-            />
-          ))}
-        </div>
+    <div className="max-h-300 h-[75vh] md:h-screen flex flex-col items-center justify-center gap-6">
+      <div className="max-h-300 h-screen w-full relative rounded-t-4xl">
+        <div className="md:hidden"><DotLayer data={dotsMobile} /></div>
+        <div className="hidden md:block"><DotLayer data={dots} /></div>
 
         <div className="absolute flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <img src="/images/hero.png" alt="hero" className="w-full min-w-100" />
