@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="hidden md:block"><DotLayer data={dots} /></div>
 
         <div className="absolute flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <img src="/images/hero.png" alt="hero" className="w-full min-w-100" />
+          <img src="/images/hero.png" alt="Lada Sritongbai — Illustrator" className="w-full min-w-100" />
           <div className="flex justify-center gap-8">
             <Link to="/gallery" className="bg-stone-900 text-white text-sm px-6 py-3 tracking-wide hover:bg-stone-700 transition-colors duration-200">
               View Gallery
