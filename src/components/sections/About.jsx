@@ -5,7 +5,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
 
           <div className="aspect-3/4 w-full flex items-center justify-center text-sm">
-            <img src="/images/author.jpg" alt="Lada Sritongbai" className="w-full object-cover" />
+            <img src="/images/author.jpg" alt="Lada Sritongbai" className="w-full object-cover px-6" />
           </div>
 
           <div>
