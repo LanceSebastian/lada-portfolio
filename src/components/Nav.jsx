@@ -8,7 +8,7 @@ const links = [
 ]
 
 const social = [
-  { to: 'https://www.instagram.com/sritongbaiarts/', icon: 'fa-brands fa-instagram'},
+  { to: 'https://www.instagram.com/sritongbaiarts/', icon: 'fa-brands fa-instagram', label: 'Instagram'},
 ]
 
 export default function Nav() {
@@ -23,10 +23,10 @@ export default function Nav() {
             <li key={to}>
               <Link
                 to={to}
-                className={`text-md tracking-wide transition-colors duration-200 ${
+                className={`text-md tracking-wide transition-all duration-200 hover:scale-100  ${
                   pathname === to
-                    ? 'text-stone-900 font-medium'
-                    : 'text-stone-400 hover:text-stone-900'
+                    ? 'text-text font-bold'
+                    : 'text-text-muted hover:text-text'
                 }`}
               >
                 {label}
@@ -40,7 +40,7 @@ export default function Nav() {
         </Link>
 
         <ul className="hidden md:flex gap-8 justify-end">
-          {social.map(({ to, icon }) => (
+          {social.map(({ to, icon, label }) => (
             <li key={to}>
               <Link
                 to={to}
@@ -50,7 +50,7 @@ export default function Nav() {
                     : 'text-stone-400 hover:text-stone-900'
                 }`}
               >
-                <i className={icon}></i>
+                <i className={icon} aria-label={label}></i>
               </Link>
             </li>
           ))}
