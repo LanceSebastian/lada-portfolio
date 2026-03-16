@@ -44,22 +44,25 @@ export default function Gallery() {
             <p className="text-text text-sm tracking-widest uppercase mb-4">Work</p>
             <h1 className="text-4xl font-light text-text">Gallery</h1>
           </div>
-          <div className="grid gap-6" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))' }}>
+          <div 
+            className="grid gap-6" 
+            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}
+          >
             {gallery.map((piece) => (
               <GalleryCard key={piece.id} piece={piece} onClick={() => setSelected(piece)} />
             ))}
           </div>
+        </div>
           {selected && (
             <div className="fixed inset-0 bg-bg-dark/80 flex items-center justify-center z-50" onClick={() => setSelected(null)}>
               <div className="bg-bg-light p-6 rounded-lg max-w-4xl w-auto" onClick={(e) => e.stopPropagation()}>
-                <img src={selected.link} alt={selected.alt} className="max-h-[80vh] max-w-[80vw]"></img>
+                <img src={selected.link} alt={selected.alt} className="max-h-[80vh] max-w-[80vw] w-full"></img>
                 <h2 className="text-2xl font-semibold mb-4">{selected.title}</h2>
                 <p className="text-text mb-4">{selected.description}</p>
                 <button className="px-4 py-2 bg-primary text-white rounded hover:bg-bg-dark transition-colors duration-200 cursor-pointer" onClick={() => setSelected(null)}>Close</button>
               </div>
             </div>
           )}
-        </div>
       </div>
     </>
   )
