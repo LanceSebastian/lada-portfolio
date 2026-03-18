@@ -17,7 +17,7 @@ export default function Nav() {
 
   return (
     <header className="sticky top-0 z-50 border-stone-200">
-      <nav className=" max-w-screen mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-3 items-center justify-between">
+      <nav className=" max-w-screen mx-auto px-6 py-4 grid grid-cols-2 md:grid-cols-3 items-center justify-between">
         <ul className="hidden md:flex gap-8">
           {links.map(({ to, label }) => (
             <li key={to}>
@@ -35,7 +35,7 @@ export default function Nav() {
           ))}
         </ul>
 
-        <Link to="/" className="font-display text-text font-semibold tracking-wide text-3xl text-left md:text-center md:text-4xl">
+        <Link to="/" className="font-display text-text font-semibold tracking-wide text-2xl text-left md:text-center md:text-4xl">
           Lada Sritongbai
         </Link>
 
@@ -64,7 +64,7 @@ export default function Nav() {
       {/* Mobile menu — full height, slides in from right */}
 
       {open && (
-        <div className="fixed inset-0 top-20 bg-bg-light z-40 flex flex-col items-center justify-center gap-8 animate-[slideIn_0.3s_ease-out]">
+        <div className="fixed inset-0 top-30 bg-bg-light z-40 flex flex-col items-center justify-center gap-8 animate-[slideIn_0.3s_ease-out]">
           {links.map(({ to, label }) => (
             <Link key={to} to={to} onClick={() => setOpen(false)}
               className="text-3xl text-text-muted hover:text-text tracking-wide transition-colors duration-200">
