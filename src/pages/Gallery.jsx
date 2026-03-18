@@ -38,9 +38,9 @@ export default function Gallery() {
         <meta property="og:description" content="Illustrations by Lada Sritongbai — narrative illustration, character design, and personal work." />
         <meta property="og:type" content="website" />
       </Helmet>
-      <div className='bg-bg-light px-6'>
-        <div className="max-w-screen mx-auto py-20 px-[10vw] bg-bg rounded-4xl">
-          <div className="mb-12">
+      <div className='bg-bg-light md:px-6'>
+        <div className="max-w-screen mx-auto py-20 md:px-[10vw] bg-bg rounded-4xl">
+          <div className="mb-12 text-center md:text-start">
             <p className="text-text text-sm tracking-widest uppercase mb-4">Work</p>
             <h1 className="text-4xl font-light text-text">Gallery</h1>
           </div>
