@@ -4,7 +4,7 @@ import dotsMobile from '../../data/dots-mobile'
 
 function DotLayer({ data }) {
   return (
-    <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute inset-0 overflow-hidden rounded-t-4xl">
       {data.map(dot => (
         <div
           key={dot.id}
