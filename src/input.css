@@ -13,6 +13,24 @@
   to   { transform: translateX(0); }
 }
 
+@keyframes nav-shrink{
+  from{
+    background-color: var(--color-bg-light);
+    box-shadow: none;
+    padding-block: 2rem;
+  }
+  to{
+    background-color: var(--color-bg-light);
+    box-shadow: 0 1px 6px oklch(0% 0 0 / 0.08);
+    padding-block: 0.75rem;
+  }
+}
+
+header {
+  animation: nav-shrink linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0px 80px;
+}
 
 .animate-bob {
   animation: bob 12s ease-in-out infinite;

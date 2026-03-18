@@ -16,7 +16,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-bg-light border-stone-200">
+    <header className="sticky top-0 z-50 border-stone-200">
       <nav className=" max-w-screen mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-3 items-center justify-between">
         <ul className="hidden md:flex gap-8">
           {links.map(({ to, label }) => (
