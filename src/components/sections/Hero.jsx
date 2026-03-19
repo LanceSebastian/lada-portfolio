@@ -33,7 +33,7 @@ export default function Hero() {
           <img src="/images/hero.png" alt="Lada Sritongbai — Illustrator" fetchPriority='high' className="w-full min-w-80 md:min-w-100" />
         </div>
         {/* Stats — bottom right */}
-        <div className="absolute bottom-0 md:bottom-10 right-0 p-8 flex flex-col items-end gap-4">
+        <div className="hidden md:flex absolute bottom-0 md:bottom-10 right-0 p-8 flex-col items-end gap-4">
           
           <div className="text-right">
             <p className="text-4xl md:text-6xl font-light text-text">4</p>
