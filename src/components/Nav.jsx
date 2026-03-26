@@ -61,24 +61,24 @@ export default function Nav() {
           {open && (<i className='fa-solid fa-xmark text-3xl'></i>)}
         </button>
 
-      {/* Mobile menu — full height, slides in from right */}
+        {/* Mobile menu — full height, slides in from right */}
 
-      {open && (
-        <div className="fixed inset-0 top-30 bg-bg-light z-40 flex flex-col items-center justify-center gap-8 animate-[slideIn_0.3s_ease-out]">
-          {links.map(({ to, label }) => (
-            <Link key={to} to={to} onClick={() => setOpen(false)}
-              className="text-3xl text-text-muted hover:text-text tracking-wide transition-colors duration-200">
-              {label}
-            </Link>
-          ))}
-          {social.map(({ to, icon }) => (
-            <a key={to} href={to} target="_blank" rel="noopener noreferrer"
-              className="text-3xl text-text-muted hover:text-text transition-colors duration-200">
-              <i className={icon}></i>
-            </a>
-          ))}
-        </div>
-      )}
+        {open && (
+          <div className="fixed inset-0 top-30 bg-bg-light z-40 flex flex-col items-center justify-center gap-8 animate-[slideIn_0.3s_ease-out]">
+            {links.map(({ to, label }) => (
+              <Link key={to} to={to} onClick={() => setOpen(false)}
+                className="text-3xl text-text-muted hover:text-text tracking-wide transition-colors duration-200">
+                {label}
+              </Link>
+            ))}
+            {social.map(({ to, icon }) => (
+              <a key={to} href={to} target="_blank" rel="noopener noreferrer"
+                className="text-3xl text-text-muted hover:text-text transition-colors duration-200">
+                <i className={icon}></i>
+              </a>
+            ))}
+          </div>
+        )}
       </nav>
     </header>
   )
